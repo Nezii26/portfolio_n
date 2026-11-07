@@ -1,0 +1,294 @@
+/*.profile-container {
+    width: min(300px, 75vw);
+    aspect-ratio: 1 / 1;
+    position: relative;
+    margin: auto;
+    padding: 6px;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg,
+            var(--primary),
+            var(--secondary),
+            #f472b6);
+
+    box-shadow: 0 0 45px #c026d333;
+    animation: fadeIn 1.2s ease;
+    transition: transform 0.4s, box-shadow 0.4s;
+}*/
+
+
+.service-card {
+
+    perspective: 1000px;
+    height: 300px;
+}
+
+.service-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.service-card:hover .service-card-inner {
+    transform: rotateY(180deg);
+}
+
+.big-font {
+
+    font-size: 60px;
+    font-weight: 2000;
+
+}
+
+.service-card-front,
+.service-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.service-card-front {
+    background: linear-gradient(45deg, #36366168, #2c1f4d7c);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.service-card-back {
+    background: rgb(71, 71, 73);
+    color: #a0bef1;
+    transform: rotateY(180deg);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .icon-wrapper {
+            width: 100px;
+            height: 100px;
+            background: rgb(82, 78, 78);
+            border-radius: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }*/
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.imag1 {
+    border-radius: 35%;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.hover-lift {
+    transition: transform 0.2s;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+/*skills section*/
+
+/* Main container styling */
+.container-fluid.bg-dark {
+  background-color: #212529 !important;
+}
+
+/* Card styling */
+.card {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2c2c2c;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.card-body2 {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+
+/* Scrolling container */
+.scrolling-wrapper-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+  will-change: transform; /* Optimize for animation */
+}
+
+/* Hover effects */
+.card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: #cdcdcd7c;
+  border-color: #495057;
+}
+
+.card img {
+  max-width: 80%;
+  max-height: 80%;
+  filter: grayscale(80%) brightness(0.85);
+  transition: all 0.3s ease;
+}
+
+.card:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+/* Pause on hover */
+.scrolling-wrapper-container:hover .scrolling-wrapper {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 120px;
+    height: 120px;
+  }
+
+  @keyframes scroll {
+    100% {
+      transform: translateX(calc(-100% + 100vw));
+    }
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .scrolling-wrapper {
+    animation: none;
+    overflow-x: auto;
+    padding-bottom: 15px; /* Space for scrollbar */
+  }
+
+  .scrolling-wrapper-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+/*text skill*/
+
+
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    background: #212529;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.card-body2 {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+}
+
+.card-body2 input {
+    background: #7e7e8428;
+    color: rgb(32, 31, 31);
+    border: 1px solid #777;
+    border-radius: 20px;
+    padding: 12px 25px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-body2 input:hover {
+    background: #a09c9c;
+    transform: translateY(-5px);
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.scroll-container:hover .scrolling-wrapper {
+    animation-play-state: paused;
+}
