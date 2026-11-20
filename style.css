@@ -218,7 +218,387 @@
     transform: scale(1.1);
 }
 
-/* Animation */
+/* Animation *//* =================================
+   SKILLS SECTION
+================================= */
+
+.myskill {
+    min-height: auto;
+    padding: 10px 0;
+    background: #212529;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 10px 30px 25px;
+}
+
+.skill-card {
+    width: 105px;
+    height: 105px;
+    background: #2c2c2c;
+    border: 1px solid #414141;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+.skill-card img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+    filter: grayscale(70%);
+    transition: 0.3s ease;
+}
+
+.skill-card p {
+    color: #ddd;
+    font-size: 12px;
+    margin: 8px 0 0;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    background: #383838;
+    border-color: #9b7aff;
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.2);
+}
+
+.skill-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+
+/* =================================
+   PROJECT SECTION
+================================= */
+
+.myProjects {
+    background: #111;
+    padding: 25px 0 55px;
+    overflow: hidden;
+}
+
+.projects-viewport {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.project-track {
+    display: flex;
+    width: max-content;
+    animation: projectScroll 45s linear infinite;
+}
+
+.project-set {
+    display: flex;
+    flex-shrink: 0;
+    gap: 22px;
+    padding-right: 22px;
+}
+
+/* Automatic scrolling */
+
+@keyframes projectScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Stop when cursor is on a project card */
+
+.projects-viewport:has(.service-card:hover) .project-track {
+    animation-play-state: paused;
+}
+
+
+/* =================================
+   PROJECT FLIP CARDS
+================================= */
+
+.service-card {
+    width: 260px;
+    height: 300px;
+    flex-shrink: 0;
+    perspective: 800px;
+}
+
+.service-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.service-card:hover .service-card-inner {
+    transform: rotateY(180deg);
+}
+
+.service-card-front,
+.service-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.service-card-front {
+    background: linear-gradient(
+        45deg,
+        #26070794,
+        #130e207c
+    );
+
+    border: 1px solid #444;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 20px;
+    text-align: center;
+}
+
+.service-card-front h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.service-card-front p {
+    font-size: 13px;
+    color: #ccc;
+}
+
+.service-card-back {
+    background: #353535;
+    color: #a0bef1;
+
+    transform: rotateY(180deg);
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-card-back h4 {
+    font-size: 19px;
+    text-align: center;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #777;
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.icon-wrapper {
+    width: 65px;
+    height: 65px;
+
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+.icon-wrapper i {
+    font-size: 30px;
+    color: white;
+}
+
+.project-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+    background: #6250a8;
+    color: white;
+
+    padding: 9px 15px;
+    border-radius: 7px;
+
+    font-size: 13px;
+    margin-top: 15px;
+
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #8068d6;
+    color: white;
+}
+
+
+/* =================================
+   CONTACT SECTION
+================================= */
+
+.contact-section {
+    background: #191919;
+    padding: 45px 0;
+}
+
+.contact-description {
+    color: #aaa;
+    font-size: 14px;
+    margin: 15px 0 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    width: 175px;
+    min-height: 145px;
+
+    background: #242424;
+    border: 1px solid #414141;
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+.contact-card img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+    filter: invert(1);
+}
+
+.contact-card i {
+    color: #aaa;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-card h5 {
+    color: white;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.contact-card p {
+    color: #999;
+    font-size: 11px;
+    margin: 0;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    border-color: #9b7aff;
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.2);
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.portfolio-footer {
+    background: #101010;
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 18px 10px 8px;
+}
+
+.portfolio-footer p {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    .skills-container {
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .skill-card {
+        width: 85px;
+        height: 90px;
+    }
+
+    .skill-card img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .service-card {
+        width: 230px;
+        height: 290px;
+    }
+
+    .contact-card {
+        width: 140px;
+        min-height: 130px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-track {
+        animation: none;
+    }
+}
 @keyframes scroll {
     0% {
         transform: translateX(0);
