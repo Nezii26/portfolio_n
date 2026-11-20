@@ -1,11 +1,3 @@
-
-/* =========================================
-   GENERAL
-========================================= */
-
-
-
-
 .hero {
     position: relative;
     min-height: 100vh;
@@ -147,15 +139,8 @@ body {
 }
 
 
-/* =========================================
-   HERO / PROFILE SECTION
-========================================= */
-
 .hero {
     min-height: 100vh;
-
-   
-      
 
     background-size: cover;
     background-position: center;
@@ -236,10 +221,6 @@ body {
 }
 
 
-/* =========================================
-   SKILLS SECTION
-========================================= */
-
 .myskill {
     min-height: auto;
     padding: 15px 0;
@@ -308,10 +289,6 @@ body {
 }
 
 
-/* =========================================
-   PROJECTS SECTION
-========================================= */
-
 .myProjects {
     background: #111;
     padding: 30px 0 50px;
@@ -365,10 +342,6 @@ body {
     animation-play-state: paused;
 }
 
-
-/* =========================================
-   PROJECT CARDS
-========================================= */
 
 .service-card {
     width: 260px;
@@ -539,11 +512,6 @@ body {
     color: white;
 }
 
-
-/* =========================================
-   CONTACT SECTION
-========================================= */
-
 .contact-section {
     background-image:
         linear-gradient(
@@ -623,10 +591,6 @@ body {
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
-
 .portfolio-footer {
     background: #101010;
 
@@ -642,11 +606,6 @@ body {
     font-size: 12px;
     margin-bottom: 7px;
 }
-
-
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
 
 @media (max-width: 992px) {
 
